@@ -228,7 +228,7 @@ func (r *PdfRenderer) processImage(node *bf.Node, entering bool) {
 	}
 }
 
-func  processCode(node *bf.Node) {
+func (r *PdfRenderer) processCode(node *bf.Node) {
 	r.tracer("processCode", fmt.Sprintf("%s", string(node.Literal)))
 	if r.NeedCodeStyleUpdate {
 		r.tracer("Code (entering)", "")
